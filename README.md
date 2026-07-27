@@ -33,8 +33,8 @@ Display the original, lower contrast, and higher contrast images.
 Split the image into B, G, R components and display the channels
 
 ## Program Developed By:
-- **Name:** A PRAVEEN KISHORE 
-- **Register Number:** 212225220074
+- **Name:** KISHORE J
+- **Register Number:** 212225240072
 
   ### Ex. No. 01
 
@@ -44,7 +44,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Read the image using OpenCV
-img = cv2.imread('Qno. 1.jpg', cv2.IMREAD_COLOR)
+img = cv2.imread('Image Jul 18, 2026, 02_23_21 PM.png', cv2.IMREAD_COLOR)
 
 # Convert BGR (OpenCV's default) to RGB (Matplotlib's expected color order)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -60,7 +60,7 @@ plt.show()
 ```python
 
 # Draw a line from top-left to bottom-right
-line_img = cv2.line(img_rgb, (0, 0), (768, 600), (0, 255, 0), 2) # cv2.line(image, start_point, end_point, color, thickness)
+line_img = cv2.line(img_rgb, (0, 0), (1536, 1024), (255,0 , 0), 3) # cv2.line(image, start_point, end_point, color, thickness)
 
 plt.imshow(line_img, cmap='viridis')  
 plt.title("Image with Line")
@@ -71,7 +71,7 @@ plt.show()
 #### 3. Draw a circle at the center of the image..
 ```python
 
-circle_img = cv2.circle(img_rgb,(200,200),150,(255,25,0),10) # cv2.circle(image, center, radius, color, thickness)
+circle_img = cv2.circle(img_rgb,(700,300),150,(0,0,255),10) # cv2.circle(image, center, radius, color, thickness)
 
 plt.imshow(circle_img, cmap='viridis')  
 plt.title("Image with Circle")
@@ -83,7 +83,8 @@ plt.show()
 ```python
 
 # Draw a rectangle around the Whole image
-rectangle_img = cv2.rectangle(img_rgb, (0, 0), (800, 500), (0, 145, 255), 10)  # cv2.rectangle(image, start_point, end_point, color, thickness)
+rectangle_img = cv2.rectangle(img_rgb, (0, 0), (768, 600), (0, 255, 0), 10)  # cv2.rectangle(image, start_point, end_point, color, thickness)
+
 
 plt.imshow(rectangle_img, cmap='viridis')  
 plt.title("Image with Rectangle")
@@ -95,7 +96,7 @@ plt.show()
 #### 5. Add the text "Your text" at the top-left corner of the image.
 ```python
 # Add text to the image
-text_img = cv2.putText(img_rgb, "ambassador", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 10)  ## cv2.putText(image, text, position, font, font_scale, color, thickness)
+text_img = cv2.putText(img_rgb, "OpenCV Drawing", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 10)  ## cv2.putText(image, text, position, font, font_scale, color, thickness)
 
 plt.imshow(text_img, cmap='viridis')  
 plt.title("Image with Text")
@@ -229,35 +230,35 @@ plt.show()
 
 ## Output:
 - **i)** Original image
- <img width="648" height="455" alt="image" src="https://github.com/user-attachments/assets/d3c86230-2ba2-44b6-8858-175ba49b45a2" />
+ <img ![alt text](image.png)/>
 
 - **ii)** Image with line , circle,rectangle, text.
- <img width="642" height="461" alt="image" src="https://github.com/user-attachments/assets/bdc890c6-25b3-435b-931b-b08bd3fb5b6f" />
- <img width="650" height="457" alt="image" src="https://github.com/user-attachments/assets/edb74f22-2771-41d2-a3c6-33c67cf475f3" />
- <img width="645" height="453" alt="image" src="https://github.com/user-attachments/assets/372d6abf-f880-4aa3-9f88-8565ee380c4a" />
- <img width="638" height="468" alt="image" src="https://github.com/user-attachments/assets/e1307db6-7e1d-40e3-8506-07ae976cda5e" />
+ <img ![alt text](image-1.png) />
+ <img ![alt text](image-2.png) />
+ <img ![alt text](image-3.png) />
+ <img ![alt text](image-4.png) />
  
 - **iii)** Image - HSV , Grayscale , YCeCb and HSV to RGB . 
-  <img width="650" height="455" alt="image" src="https://github.com/user-attachments/assets/37cf27ff-b58d-469d-8b38-914ae832547d" />
-  <img width="661" height="447" alt="image" src="https://github.com/user-attachments/assets/39999e64-0ffa-4f91-8a35-5208f4840854" />
-  <img width="635" height="460" alt="image" src="https://github.com/user-attachments/assets/479cc8ba-ee6b-4d8a-88ee-b55fbd76bb30" />
-  <img width="672" height="445" alt="image" src="https://github.com/user-attachments/assets/c7ff2123-7652-4f5f-afc3-3c68b9799764" />
+  <img ![alt text](image-5.png) />
+  <img ![alt text](image-6.png) />
+  <img ![alt text](image-7.png) />
+  <img ![alt text](image-8.png) />
   
 - **iv)** Image with block .
 - 
-  <img width="696" height="466" alt="image" src="https://github.com/user-attachments/assets/423b158e-e6db-4a00-a7f6-7f26de4252a4" />
+  <img ![alt text](image-9.png) />
 
 - **v)** Image - Resized Image (Half Size) ,  Cropped Region of Interest (ROI),Flipped Horizontally ,Flipped Vertically
-  <img width="632" height="507" alt="image" src="https://github.com/user-attachments/assets/d368ef4c-58c7-4be9-9a3e-80720683b822" />
-  <img width="488" height="505" alt="image" src="https://github.com/user-attachments/assets/5054d9cc-878f-4764-a770-a278037e533c" />
-  <img width="628" height="465" alt="image" src="https://github.com/user-attachments/assets/d189a215-7af0-4a41-9f6a-978ef56d56d3" />
-  <img width="635" height="460" alt="image" src="https://github.com/user-attachments/assets/e9c8fc9b-639a-487f-8cac-375132aff855" />
+  <img ![alt text](image-10.png) />
+  <img ![alt text](image-11.png) />
+  <img ![alt text](image-12.png) />
+  <img ![alt text](image-13.png) />
 
 
 
 - **vi)** Image with merged another image.
 - 
-  <img width="642" height="450" alt="image" src="https://github.com/user-attachments/assets/584bdeaf-9839-4acc-a0c5-0df5263b59ec" />
+  <img ![alt text](image-14.png) />
 
 ## Result:
 Thus, the images were read, displayed, brightness and contrast adjustments were made, and bitwise operations were performed successfully using the Python program.

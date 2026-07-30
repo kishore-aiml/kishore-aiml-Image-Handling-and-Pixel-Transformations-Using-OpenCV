@@ -236,7 +236,7 @@ plt.show()
  <img ![alt text](image-1.png) />
  <img ![alt text](image-2.png) />
  <img ![alt text](image-3.png) />
- <img ![alt text](image-4.png) />
+ <img ![alt text](image-4.png)/>
  
 - **iii)** Image - HSV , Grayscale , YCeCb and HSV to RGB . 
   <img ![alt text](image-5.png) />
